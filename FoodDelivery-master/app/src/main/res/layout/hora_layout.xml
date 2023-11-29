@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="113dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="4dp"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:text="TextView" />
+        <!-- TextView para el día -->
+
+        <LinearLayout
+            android:layout_width="129dp"
+            android:layout_height="88dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIA"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/arrow_up_day"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="incrementDay"
+                android:src="@android:drawable/arrow_up_float"
+                app:layout_constraintStart_toEndOf="@id/v1" />
+
+            <TextView
+                android:id="@+id/dayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:layout_constraintTop_toBottomOf="@id/arrow_up_day" />
+
+            <ImageView
+                android:id="@+id/arrow_down_day"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="decrementDay"
+                android:src="@android:drawable/arrow_down_float"
+                app:layout_constraintStart_toEndOf="@id/dayTextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="137dp"
+            android:layout_height="88dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MES"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/arrow_up_mes"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="incrementMes"
+                android:src="@android:drawable/arrow_up_float"
+                app:layout_constraintStart_toEndOf="@id/v1" />
+
+            <TextView
+                android:id="@+id/mesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:layout_constraintTop_toBottomOf="@id/arrow_up_day" />
+
+            <ImageView
+                android:id="@+id/arrow_down_mes"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="decrementMes"
+                android:src="@android:drawable/arrow_down_float"
+                app:layout_constraintStart_toEndOf="@id/dayTextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="118dp"
+            android:layout_height="88dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HORA"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/arrow_up_hora"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="incrementHora"
+                android:src="@android:drawable/arrow_up_float"
+                app:layout_constraintStart_toEndOf="@id/v1" />
+
+            <TextView
+                android:id="@+id/horaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:layout_constraintTop_toBottomOf="@id/arrow_up_day" />
+
+            <ImageView
+                android:id="@+id/arrow_down_hora"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="decrementHora"
+                android:src="@android:drawable/arrow_down_float"
+                app:layout_constraintStart_toEndOf="@id/dayTextView" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
